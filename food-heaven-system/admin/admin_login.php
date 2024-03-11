@@ -40,16 +40,7 @@ if(isset($_POST['submit'])){
    <link rel="stylesheet" href="../css/admin_style.css">
 
    <style>
-      /* CSS for background image */
-      body {
-         margin: 0;
-         padding: 0;
-         background-image: url('image.jpg'); /* Replace 'path/to/your/background/image.jpg' with the actual path to your image */
-         background-size: cover;
-         background-repeat: no-repeat;
-         background-attachment: fixed;
-         background-position: center;
-      }
+      
    </style>
 
 </head>
@@ -73,7 +64,7 @@ if(isset($message)){
 <section class="form-container">
   
    <form action="" method="POST">
-      <h3>login now</h3>
+      <h3>Food Heaven Admin Panel</h3>
       
       <p>default username = <span>admin</span> & password = <span>123</span></p>
       
