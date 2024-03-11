@@ -1,0 +1,664 @@
+/* Importing Montserrat font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+
+/* Root variables for color scheme */
+:root{
+   --main-color:#4834d4; /* Main color */
+   --red:#e74c3c; /* Red color */
+   --orange:#f39c12; /* Orange color */
+   --black:#34495e; /* Black color */
+   --white:#fff; /* White color */
+   --light-bg:#f5f5f5; /* Light background color */
+   --light-color:#999; /* Light text color */
+   --border:.5rem solid var(--black); /* Border style */
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1); /* Box shadow */
+}
+
+/* Global styles */
+*{
+   font-family: 'Montserrat', sans-serif; /* Setting font family */
+   margin:0; padding:0; /* Resetting margin and padding */
+   box-sizing: border-box; /* Box sizing */
+   text-decoration: none; /* Removing text decoration */
+   outline: none; border:none; /* Removing outline and border */
+}
+
+/* Styling selected text */
+*::selection{
+   color:var(--white); /* Selected text color */
+   background-color: var(--main-color); /* Selected text background color */
+}
+
+/* Customizing scrollbar */
+::-webkit-scrollbar{
+   width: 1rem;
+   height: .5rem;
+}
+
+::-webkit-scrollbar-track{
+  background-color: none;
+}
+
+::-webkit-scrollbar-thumb{
+   background-color: var(--main-color);
+}
+
+/* Base styles for HTML */
+html{
+   font-size: 62.5%; /* Setting base font size */
+   overflow-x: hidden; /* Hiding horizontal overflow */
+}
+
+/* Body styles */
+body{
+   background-color: var(--light-bg);
+   /* padding-bottom: 7rem; */
+
+}
+
+/* Section styles */
+section{
+   max-width: 1200px; /* Setting maximum width for sections */
+   margin:0 auto; /* Centering sections horizontally */
+   padding:2rem; /* Adding padding to sections */
+}
+
+/* Button styles */
+.btn,
+.delete-btn,
+.option-btn{
+   display: block; /* Making buttons block-level elements */
+   margin-top: 1rem; /* Adding top margin */
+   border-radius: .5rem; /* Adding border radius */
+   cursor: pointer; /* Setting cursor to pointer */
+   width: 100%; /* Making buttons full width */
+   font-size: 1.8rem; /* Setting font size */
+   color:var(--white); /* Setting text color */
+   padding:1.2rem 3rem; /* Adding padding */
+   text-transform: capitalize; /* Capitalizing text */
+   text-align: center; /* Centering text */
+}
+
+/* Primary button styles */
+.btn{
+   background-color: var(--main-color); /* Setting background color */
+}
+
+/* Delete button styles */
+.delete-btn{
+   background-color: var(--red); /* Setting background color */
+}
+
+/* Option button styles */
+.option-btn{
+   background-color: var(--orange); /* Setting background color */
+}
+
+/* Button hover styles */
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover{
+   background-color: var(--black); /* Changing background color on hover */
+}
+
+/* Flex button styles */
+.flex-btn{
+   display: flex; /* Making flex buttons */
+   gap:1rem; /* Adding gap between buttons */
+}
+
+/* Message styles */
+.message{
+   position: sticky; /* Making message sticky */
+   top:0; /* Aligning message to top */
+   max-width: 1200px; /* Setting maximum width */
+   margin:0 auto; /* Centering message horizontally */
+   background-color: var(--light-bg); /* Setting background color */
+   padding:2rem; /* Adding padding */
+   display: flex; /* Making message flex */
+   align-items: center; /* Aligning items vertically */
+   gap:1rem; /* Adding gap between items */
+   justify-content: space-between; /* Distributing space between items */
+}
+
+/* Message span styles */
+.message span{
+   font-size: 2rem; /* Setting font size */
+   color:var(--black); /* Setting text color */
+}
+
+/* Message icon styles */
+.message i{
+   font-size: 2.5rem; /* Setting font size */
+   color:var(--red); /* Setting icon color */
+   cursor: pointer; /* Setting cursor to pointer */
+}
+
+/* Message icon hover styles */
+.message i:hover{
+   color:var(--black); /* Changing icon color on hover */
+}
+
+/* Heading styles */
+.heading{
+   text-align: center; /* Centering text */
+   margin-bottom: 2rem; /* Adding bottom margin */
+   text-transform: capitalize; /* Capitalizing text */
+   color:var(--black); /* Setting text color */
+   font-size: 3rem; /* Setting font size */
+}
+
+/* Empty state styles */
+.empty{
+   border:var(--border); /* Adding border */
+   border-radius: .10rem; /* Adding border radius */
+   background-color: var(--white); /* Setting background color */
+   padding:1.5rem; /* Adding padding */
+   text-align: center; /* Centering text */
+   width: 100%; /* Making full width */
+   font-size: 2rem; /* Setting font size */
+   text-transform: capitalize; /* Capitalizing text */
+   color:var(--red); /* Setting text color */
+   box-shadow: var(--box-shadow); /* Adding box shadow */
+}
+
+/* Form container styles */
+.form-container{
+   display: flex; /* Making flex form container */
+   align-items: center; /* Aligning items vertically */
+   justify-content: center; /* Centering items horizontally */
+   min-height: 200vh; /* Setting minimum height to viewport height */
+}
+
+/* Form styles */
+.form-container form{
+   background-color: var(--white); /* Setting background color */
+   border-radius: .5rem; /* Adding border radius */
+   border:var(--border); /* Adding border */
+   box-shadow: var(--box-shadow); /* Adding box shadow */
+   padding:2rem; /* Adding padding */
+   text-align: center; /* Centering text */
+   width: 50rem; /* Setting width */
+}
+
+/* Form heading styles */
+.form-container form h3{
+   font-size: 2.5rem; /* Setting font size */
+   color:var(--black); /* Setting text color */
+   text-transform: capitalize; /* Capitalizing text */
+   margin-bottom: 1rem; /* Adding bottom margin */
+}
+
+/* Form paragraph styles */
+.form-container form p{
+   margin:1rem 0; /* Adding margin */
+   font-size: 2rem; /* Setting font size */
+   color:var(--light-color); /* Setting text color */
+}
+
+/* Form paragraph span styles */
+.form-container form p span{
+   color:var(--main-color); /* Setting text color */
+}
+
+/* Form input styles */
+.form-container form .box{
+   width: 100%; /* Making full width */
+   background-color: var(--light-bg); /* Setting background color */
+   padding:1.4rem; /* Adding padding */
+   font-size: 1.4rem; /* Setting font size */
+   color:var(--black); /* Setting text color */
+   margin:1rem 0; /* Adding margin */
+   border:var(--border); /* Adding border */
+   font-size: 1.8rem; /* Setting font size */
+   border-radius: .5rem; /* Adding border radius */
+}
+
+/* Header styles */
+.header{
+   position: sticky; /* Making header sticky */
+   top:0; left:0; right:0; /* Aligning header to top */
+   background-color: var(--white); /* Setting background color */
+   box-shadow: var(--box-shadow); /* Adding box shadow */
+   z-index: 1000; /* Setting z-index */
+   border-bottom: var(--border); /* Adding bottom border */
+}
+
+/* Header flex styles */
+.header .flex{
+   display: flex; /* Making flex header */
+   align-items: center; /* Aligning items vertically */
+   justify-content: space-between; /* Distributing space between items */
+   position: relative; /* Making position relative */
+}
+
+/* Logo styles */
+.header .flex .logo{
+   font-size: 2.5rem; /* Setting font size */
+   color:var(--black); /* Setting text color */
+}
+
+/* Logo span styles */
+.header .flex .logo span{
+   color:var(--main-color); /* Setting text color */
+}
+
+/* Navbar link styles */
+.header .flex .navbar a{
+   margin:0 1rem; /* Adding margin */
+   font-size: 2rem; /* Setting font size */
+   color:var(--light-color); /* Setting text color */
+}
+
+/* Navbar link hover styles */
+.header .flex .navbar a:hover{
+   color:var(--main-color); /* Changing text color on hover */
+}
+
+/* Header icons styles */
+.header .flex .icons > *{
+   font-size: 2.5rem; /* Setting font size */
+   cursor: pointer; /* Setting cursor to pointer */
+   color:var(--light-color); /* Setting icon color */
+   margin-left: 1.7rem; /* Adding left margin */
+}
+
+/* Header icon hover styles */
+.header .flex .icons > *:hover{
+   color:var(--main-color); /* Changing icon color on hover */
+}
+
+/* Profile styles */
+.header .flex .profile{
+   position: absolute; /* Making position absolute */
+   top:125%; right:2rem; /* Positioning relative to parent */
+   background-color: var(--white); /* Setting background color */
+   box-shadow: var(--box-shadow); /* Adding box shadow */
+   border:var(--border); /* Adding border */
+   border-radius: .5rem; /* Adding border radius */
+   padding:2rem; /* Adding padding */
+   padding-top: 1rem; /* Adding top padding */
+   width: 30rem; /* Setting width */
+   display: none; /* Hiding profile by default */
+   animation: fadeIn .2s linear; /* Adding fade in animation */
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+   0%{
+      transform: translateY(1rem); /* Translating Y */
+   }
+}
+
+/* Profile paragraph styles */
+.header .flex .profile p{
+   margin-bottom: 1rem; /* Adding bottom margin */
+   font-size: 2rem; /* Setting font size */
+   text-align: center; /* Centering text */
+   color:var(--black); /* Setting text color */
+}
+
+/* Active profile styles */
+.header .flex .profile.active{
+   display: inline-block; /* Displaying profile */
+}
+
+/* Menu button styles */
+#menu-btn{
+   display: none; /* Hiding menu button by default */
+}
+/* Dashboard box container styles */
+.dashboard .box-container{
+   display: grid; /* Making box container grid */
+   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr)); /* Setting grid columns */
+   gap:1.5rem; /* Adding gap between grid items */
+   align-items: flex-start; /* Aligning items at the start */
+}
+
+/* Dashboard box styles */
+.dashboard .box-container .box{
+   text-align: center; /* Centering text */
+   background-color: var(--white); /* Setting background color */
+   border:var(--border); /* Adding border */
+   box-shadow: var(--box-shadow); /* Adding box shadow */
+   border-radius: .5rem; /* Adding border radius */
+   text-align: center; /* Centering text */
+   padding:1.5rem; /* Adding padding */
+}
+
+/* Dashboard box heading styles */
+.dashboard .box-container .box h3{
+   font-size: 2.7rem; /* Setting font size */
+   color:var(--black); /* Setting text color */
+}
+
+/* Dashboard box heading span styles */
+.dashboard .box-container .box h3 span{
+   font-size: 2rem; /* Setting font size */
+}
+
+/* Dashboard box paragraph styles */
+.dashboard .box-container .box p{
+   padding:1.5rem; /* Adding padding */
+   border-radius: .5rem; /* Adding border radius */
+   background-color: var(--light-bg); /* Setting background color */
+   border-radius: .5rem; /* Adding border radius */
+   font-size: 1.8rem; /* Setting font size */
+   border:var(--border); /* Adding border */
+   margin:1rem 0; /* Adding margin */
+   color:var(--light-color); /* Setting text color */
+}
+
+/* Add products form styles */
+.add-products form{
+   margin:0 auto; /* Centering form horizontally */
+   max-width: 50rem; /* Setting maximum width */
+   background-color: var(--white); /* Setting background color */
+   border-radius: .5rem; /* Adding border radius */
+   box-shadow: var(--box-shadow); /* Adding box shadow */
+   border:var(--border); /* Adding border */
+   padding:2rem; /* Adding padding */
+   text-align: center; /* Centering text */
+}
+
+/* Add products form heading styles */
+.add-products form h3{
+   margin-bottom: 1rem; /* Adding bottom margin */
+   font-size: 2.5rem; /* Setting font size */
+   color:var(--black); /* Setting text color */
+   text-transform: capitalize; /* Capitalizing text */
+}
+
+/* Add products form box styles */
+.add-products form .box{
+   background-color: var(--light-bg); /* Setting background color */
+   border:var(--border); /* Adding border */
+   width: 100%; /* Making full width */
+   padding:1.4rem; /* Adding padding */
+   font-size: 1.8rem; /* Setting font size */
+   color:var(--black); /* Setting text color */
+   border-radius: .5rem; /* Adding border radius */
+   margin: 1rem 0; /* Adding margin */
+}
+
+/* Show products box container styles */
+.show-products .box-container{
+   display: grid; /* Making box container grid */
+   grid-template-columns: repeat(auto-fit, 33rem); /* Setting grid columns */
+   gap:1.5rem; /* Adding gap between grid items */
+   justify-content: center; /* Centering items horizontally */
+   align-items: flex-start; /* Aligning items at the start */
+}
+
+/* Show products box styles */
+.show-products .box-container .box{
+   background-color: var(--white); /* Setting background color */
+   border-radius: .5rem; /* Adding border radius */
+   box-shadow: var(--box-shadow); /* Adding box shadow */
+   border:var(--border); /* Adding border */
+   padding:1.5rem; /* Adding padding */
+}
+
+/* Show products box image styles */
+.show-products .box-container .box img{
+   width: 100%; /* Making image full width */
+   height: 20rem; /* Setting image height */
+   object-fit: contain; /* Containing image within box */
+   margin-bottom: 1rem; /* Adding bottom margin */
+}
+
+/* Show products box name styles */
+.show-products .box-container .box .name{
+   font-size: 2rem; /* Setting font size */
+   color:var(--black); /* Setting text color */
+   padding:1rem 0; /* Adding padding */
+}
+
+/* Show products box flex styles */
+.show-products .box-container .box .flex{
+   display: flex; /* Making flex container */
+   align-items: center; /* Aligning items vertically */
+   gap:1rem; /* Adding gap between items */
+   justify-content: space-between; /* Distributing space between items */
+}
+
+/* Show products box category styles */
+.show-products .box-container .box .flex .category{
+   font-size: 1.8rem; /* Setting font size */
+   color:var(--main-color); /* Setting text color */
+}
+
+/* Show products box price styles */
+.show-products .box-container .box .flex .price{
+   font-size: 2rem; /* Setting font size */
+   color:var(--black); /* Setting text color */
+   margin:.5rem 0; /* Adding margin */
+}
+
+/* Show products box price span styles */
+.show-products .box-container .box .flex .price span{
+   font-size: 1.5rem; /* Setting font size */
+}
+
+/* Update product form styles */
+.update-product form{
+   margin:0 auto; /* Centering form horizontally */
+   max-width: 50rem; /* Setting maximum width */
+   background-color: var(--white); /* Setting background color */
+   border-radius: .5rem; /* Adding border radius */
+   box-shadow: var(--box-shadow); /* Adding box shadow */
+   border:var(--border); /* Adding border */
+   padding:2rem; /* Adding padding */
+}
+
+/* Update product form image styles */
+.update-product form img{
+   height: 25rem; /* Setting image height */
+   width: 100%; /* Making image full width */
+   object-fit: contain; /* Containing image within box */
+}
+
+/* Update product form box styles */
+.update-product form .box{
+   background-color: var(--light-bg); /* Setting background color */
+   border:var(--border); /* Adding border */
+   width: 100%; /* Making full width */
+   padding:1.4rem; /* Adding padding */
+   font-size: 1.8rem; /* Setting font size */
+   color:var(--black); /* Setting text color */
+   border-radius: .5rem; /* Adding border radius */
+   margin: 1rem 0; /* Adding margin */
+}
+
+/* Update product form textarea styles */
+.update-product form textarea{
+   height: 15rem; /* Setting textarea height */
+   resize: none; /* Disabling textarea resize */
+}
+
+/* Update product form span styles */
+.update-product form span{
+   font-size: 1.7rem; /* Setting font size */
+   color:var(--black); /* Setting text color */
+}
+
+/* Placed orders box container styles */
+.placed-orders .box-container{
+   display: grid; /* Making box container grid */
+   grid-template-columns: repeat(auto-fit, 33rem); /* Setting grid columns */
+   gap:1.5rem; /* Adding gap between grid items */
+   justify-content: center; /* Centering items horizontally */
+   align-items: flex-start; /* Aligning items at the start */
+}
+
+/* Placed orders box styles */
+.placed-orders .box-container .box{
+   background-color: var(--white); /* Setting background color */
+   border-radius: .5rem; /* Adding border radius */
+   box-shadow: var(--box-shadow); /* Adding box shadow */
+   border:var(--border); /* Adding border */
+   padding:2rem; /* Adding padding */
+   padding-top: 1rem; /* Adding top padding */
+}
+
+/* Placed orders box paragraph styles */
+.placed-orders .box-container .box p{
+   padding: .5rem 0; /* Adding padding */
+   line-height: 1.5; /* Setting line height */
+   font-size: 1.8rem; /* Setting font size */
+   color:var(--black); /* Setting text color */
+}
+
+/* Placed orders box paragraph span styles */
+.placed-orders .box-container .box p span{
+   color:var(--main-color); /* Setting text color */
+}
+
+/* Placed orders box drop-down styles */
+.placed-orders .box-container .box .drop-down{
+   width: 100%; /* Making full width */
+   margin:1rem 0; /* Adding margin */
+   background-color: var(--light-bg); /* Setting background color */
+   padding:1rem 1.4rem; /* Adding padding */
+   font-size: 2rem; /* Setting font size */
+   color:var(--black); /* Setting text color */
+   border:var(--border); /* Adding border */
+   border-radius: .5rem; /* Adding border radius */
+}
+
+/* Accounts box container styles */
+.accounts .box-container{
+   display: grid; /* Making box container grid */
+   grid-template-columns: repeat(auto-fit, 33rem); /* Setting grid columns */
+   gap:1.5rem; /* Adding gap between grid items */
+   justify-content: center; /* Centering items horizontally */
+   align-items: flex-start; /* Aligning items at the start */
+}
+
+/* Accounts box styles */
+.accounts .box-container .box{
+   background-color: var(--white); /* Setting background color */
+   border-radius: .5rem; /* Adding border radius */
+   box-shadow: var(--box-shadow); /* Adding box shadow */
+   border:var(--border); /* Adding border */
+   padding:2rem; /* Adding padding */
+   padding-top: 1rem; /* Adding top padding */
+   text-align: center; /* Centering text */
+}
+
+/* Accounts box paragraph styles */
+.accounts .box-container .box p{
+   padding: .5rem 0; /* Adding padding */
+   font-size: 1.8rem; /* Setting font size */
+   color:var(--black); /* Setting text color */
+}
+
+/* Accounts box paragraph span styles */
+.accounts .box-container .box p span{
+   color:var(--main-color); /* Setting text color */
+}
+
+/* Messages box container styles */
+.messages .box-container{
+   display: grid; /* Making box container grid */
+   grid-template-columns: repeat(auto-fit, 33rem); /* Setting grid columns */
+   gap:1.5rem; /* Adding gap between grid items */
+   justify-content: center; /* Centering items horizontally */
+   align-items: flex-start; /* Aligning items at the start */
+}
+
+/* Messages box styles */
+.messages .box-container .box{
+   background-color: var(--white); /* Setting background color */
+   border-radius: .5rem; /* Adding border radius */
+   box-shadow: var(--box-shadow); /* Adding box shadow */
+   border:var(--border); /* Adding border */
+   padding:2rem; /* Adding padding */
+   padding-top: 1rem; /* Adding top padding */
+}
+
+/* Messages box paragraph styles */
+.messages .box-container .box p{
+   padding: .5rem 0; /* Adding padding */
+   font-size: 1.8rem; /* Setting font size */
+   color:var(--black); /* Setting text color */
+}
+
+/* Messages box paragraph span styles */
+.messages .box-container .box p span{
+   color:var(--main-color); /* Setting text color */
+}
+
+/* Media queries for smaller screens */
+@media (max-width:991px){
+
+   html{
+      font-size: 55%; /* Adjusting font size for smaller screens */
+   }
+
+}
+
+@media (max-width:768px){
+
+   /* Showing menu button */
+   #menu-btn{
+      display: inline-block; /* Displaying menu button */
+   }
+
+   /* Navbar styles for smaller screens */
+   .header .flex .navbar{
+      position: absolute; /* Making position absolute */
+      top:99%; left:0; right:0; /* Positioning relative to parent */
+      border-top: var(--border); /* Adding top border */
+      border-bottom: var(--border); /* Adding bottom border */
+      background-color: var(--white); /* Setting background color */
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Clipping navbar */
+      transition: .2s linear; /* Adding transition */
+   }
+
+   /* Active navbar styles */
+   .header .flex .navbar.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Clipping navbar */
+   }
+
+   /* Navbar link styles for smaller screens */
+   .header .flex .navbar a{
+      display: block; /* Displaying as block */
+      margin:2rem; /* Adding margin */
+   }
+
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%; /* Adjusting font size for smaller screens */
+   }
+
+   /* Flex button styles for smaller screens */
+   .flex-btn{
+      flex-flow: column; /* Changing flex direction to column */
+      gap:0; /* Removing gap */
+   }
+
+   /* Heading styles for smaller screens */
+   .heading{
+      font-size: 3rem; /* Setting font size */
+   }
+
+   /* Box container styles for smaller screens */
+   .show-products .box-container{
+      grid-template-columns: 1fr; /* Setting grid columns */
+   }
+
+   /* Box container styles for smaller screens */
+   .placed-orders .box-container{
+      grid-template-columns: 1fr; /* Setting grid columns */
+   }
+
+   /* Box container styles for smaller screens */
+   .accounts .box-container{
+      grid-template-columns: 1fr; /* Setting grid columns */
+   }
+
+}
